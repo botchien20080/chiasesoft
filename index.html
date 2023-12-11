@@ -27,26 +27,30 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
 
-        li {
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .download-btn {
+            display: inline-block;
             padding: 10px;
-            border-bottom: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        li:last-child {
-            border-bottom: none;
-        }
-
-        a {
+            background-color: #007bff;
+            color: #fff;
             text-decoration: none;
-            color: #007bff;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -56,18 +60,26 @@
         <h1>Software List</h1>
     </header>
 
-     <section>
-        <ul>
-            <li>
-                <span><a href="link_phan_mem_1">Software Name 1</a></span>
-                <a href="http://bit.ly/office2021nha" target="_blank">Download</a>
-            </li>
-            <li>
-                <span><a href="link_phan_mem_2">Software Name 2</a></span>
-                <a href="#">Download</a>
-            </li>
-            <!-- Add more software items as needed -->
-        </ul>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Software Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Software 1</td>
+                    <td><a class="download-btn" href="http://bit.ly/office2021nha" target="_blank">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Software 2</td>
+                    <td><a class="download-btn" href="#">Download</a></td>
+                </tr>
+                <!-- Add more software items as needed -->
+            </tbody>
+        </table>
     </section>
 
 </body>
